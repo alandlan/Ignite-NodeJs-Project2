@@ -1,5 +1,9 @@
-import * as express from 'express';
+import express from "express";
 
 const app = express();
 
-app.listen(3333,() => console.log('server is running!'));
+app.get("/", (request, response) => {
+  return response.json({ ola: "Ola" });
+});
+
+app.listen(3333, () => console.log("Server is running!"));
